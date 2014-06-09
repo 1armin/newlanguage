@@ -1,0 +1,275 @@
+   /* html5doctor.com Reset v1.6.1 - http://w3tms.com */
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}nav ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}ins{background-color:#ff9;color:#000;text-decoration:none}mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}input,select{vertical-align:middle}
+
+@font-face {
+    font-family: 'OpenSansRegular';
+    src: url('../font/OpenSans-Regular/OpenSans-Regular.eot');
+    src: url('../font/OpenSans-Regular/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../font/OpenSans-Regular/OpenSans-Regular.woff') format('woff'),
+         url('../font/OpenSans-Regular/OpenSans-Regular.ttf') format('truetype'),
+         url('../font/OpenSans-Regular/OpenSans-Regular.svg#OpenSansRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+body {
+	background: #46d9f9;
+	font-family:'OpenSansRegular', Helvetica, Arial, sans-serif;
+}
+header {
+	width: 100%;
+	height: 40px;
+	background: #2c2c2c;
+	position: fixed;
+	top: 0;
+	min-width: 600px;
+	z-index: 1000;
+}
+#logo {
+	width: 179px;
+	height: 28px;
+	display: block;
+	float: left;
+	margin: 8px 0 0 20px;
+	text-indent: -99999px;
+	background: url(../img/headericon.png) no-repeat;
+	cursor: default;
+}
+#help {
+	width: 28px;
+	height: 28px;
+	display: block;
+	float: right;
+	margin: 7px 20px;
+	text-indent: -99999px;
+	background: url(../img/headericon.png) no-repeat;
+	background-position: -179px;
+	cursor: help;
+}
+#help:hover {
+	opacity: .9;
+}
+#setting {
+	width: 28px;
+	height: 28px;
+	display: block;
+	float: right;
+	margin: 7px 20px;
+	text-indent: -99999px;
+	background: url(../img/headericon.png) no-repeat;
+	background-position: -207px;
+}
+#setting:hover {
+	opacity: .9;
+}
+#logout {
+	display: block;
+	float: right;
+	margin: 7px 20px;
+	padding: 6px 12px 7px 12px;
+	line-height: 14px;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: 500;
+	color: #fff;
+	background-color: #ffa200;
+}
+#logout:hover {
+	opacity: .95;
+}
+#username {
+	float: right;
+	margin: 12px 0 0 10px;
+	font-size: 16px;
+	line-height: 16px;
+	color: #fff;
+	cursor: default;
+}
+#usericon {
+	width: 28px;
+	height: 28px;
+	display: block;
+	float: right;
+	margin: 6px 15px;
+	text-indent: -99999px;
+	background: url(../img/headericon.png) no-repeat;
+	background-position: -235px;
+}
+#msgnotvrfy {
+	width: 98%;
+	margin: 5px auto;
+	padding: 10px 0 10px 0;
+	background-color: #fff95b;
+	color: #000;
+	font-weight: 500;
+	font-size: 14px;
+	text-align: center;
+	display: block;
+}
+#messagebox {
+	width: 98%;
+	margin: 5px auto;
+	padding: 10px 0 10px 0;
+	color: #fff;
+	font-size: 14px;
+	text-align: center;
+	display: block;
+}
+.msg_r {
+	background-color: #ff2a00;
+}
+.msg_y {
+	background-color: #fff95b;
+	color: #000!important;
+}
+.msg_g {
+	background-color: #56b15c;
+}
+#msgclose,#msgnotvrfyclose{
+	float: right;
+	margin-top: -4px;
+	margin-right: 10px;
+	padding: 4px 7px;
+	border-radius: 50%;
+	background-color: #000;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 700;
+	display: block;
+	cursor: pointer;
+}
+#msgclose:hover,#msgnotvrfyclose:hover {
+	opacity: .7;
+}
+#sidebar {
+	width: 100px;
+	height: 100%;
+	min-height: 500px;
+	background: #161616;
+	position: fixed;
+	top: 40px;
+}
+#sidebar li a {
+	width: 100px;
+	height: 120px;
+	margin-bottom: 1px;
+	display: block;
+	text-indent: -99999px;
+	background: url(../img/sidebaricon.png) no-repeat;
+	
+}
+#sidebar li #sgame {
+	background-position: -100px;
+}
+#sidebar li #sstory {
+	background-position: -200px;
+}
+#sidebar li #svocabulary {
+	background-position: -300px;
+}
+#sidebar li a:hover {
+background-color: #454545;
+}
+#sidebar .active {
+	background-color: #454545;
+}
+#container {
+	float: left;
+	padding: 40px 0 0 100px;
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+footer {
+	width: 550px;
+	height: 32px;
+	position: fixed;
+	bottom: 0;
+	margin-left: 100px;
+}
+#sitemap {
+	display: inline-block;
+	float: left;
+	margin: 0 25px 0px 30px;
+	padding: 5px 12px 6px 12px;
+	line-height: 14px;
+	font-size: 14px;
+	color: #000;
+	background-color: #fff;
+	opacity: .6;
+	cursor: pointer;
+}
+#copyright {
+	display: inline-block;
+	float: left;
+	font-size: 14px;
+	color: #fff;
+	margin-top: 6px;
+	opacity: .8;
+	cursor: default;
+}
+#overlay {
+     visibility: hidden;
+     position: fixed;
+     left: 0px;
+     top: 0px;
+     width:100%;
+     height:100%;
+     background-color: #000;
+     opacity: .98;
+     z-index: 1000;
+}
+#smapcls {
+	width: 90px;
+	display: block;
+	background-color: #ffa200;
+	color: #000;
+	font-size: 24px;
+	padding: 7px 0;
+	position: absolute;
+	text-align: center;
+	top: 30px;
+	right: 20px;
+	z-index: 2;
+	cursor: pointer;
+}
+#smapcls:hover {
+	opacity: .95;
+}
+#overlay h2 {
+	width: 100%;
+	color: #fff;
+	font-size: 42px;
+	position: absolute;
+	top: 50px;
+	text-align: center;
+	cursor: default;
+}
+#overlay a {
+	font-size: 20px;
+	display: block;
+	color: #fff;
+	margin: 25px 0;
+	text-decoration: none;
+}
+#overlay a:hover {
+	color: #ffa200;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+#overlay ul {
+	float: left;
+	margin: 200px 0 0 18%;
+}
+p.discription_top {
+	width: 500px;
+	height: auto;
+	margin: 20px auto 0 auto;
+	color: #eee;
+	font-size: 18px;
+	font-style: italic;
+	line-height: 25px;
+	text-align: center;
+}

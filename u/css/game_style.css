@@ -1,0 +1,238 @@
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.component ::before,
+.component ::after {
+	content: "";
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.component a {
+	color: #2c3e50;
+	text-decoration: none;
+}
+
+/*************************************
+ basic grid, only for this demo
+**************************************/
+
+.align {
+	clear: both;
+	margin: 50px auto 20px;
+	width: 100%;
+	max-width: 1170px;
+	text-align: center;
+}
+
+.align > li {
+	width: 500px;
+	min-height: 300px;
+	display: inline-block;
+	margin: 30px 20px 30px 30px;
+	padding: 0 0 0 60px;
+	vertical-align: top;
+}
+
+/*************************************
+Build the game and rotate on hover
+**************************************/
+
+.game {
+	position: relative;
+	width: 160px; 
+	height: 220px;
+	-webkit-perspective: 1000px;
+	-moz-perspective: 1000px;
+	perspective: 1000px;
+}
+
+.movie {
+	width: 160px; 
+	height: 220px;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform: translateZ(-80px);
+	-moz-transform: translateZ(-80px);
+	transform: translateZ(-80px);
+	-webkit-transition: -webkit-transform 350ms;
+	-moz-transition: -moz-transform 350ms;
+	transition: transform 350ms;
+}
+
+.game:hover .movie{
+	-webkit-transform: rotateY(-78deg) translateZ(20px);
+	-moz-transform: rotateY(-78deg) translateZ(20px);
+	transform: rotateY(-78deg) translateZ(20px);
+}
+
+/*************************************
+Transform and style the two planes
+**************************************/
+
+.movie .poster, 
+.movie .info {
+	position: absolute;
+	width: 160px; 
+	height: 220px;
+	background-color: #fff;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.movie .poster  {
+	-webkit-transform: translateZ(80px);
+	-moz-transform: translateZ(80px);
+	transform: translateZ(80px);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.movie .info {
+	-webkit-transform: rotateY(90deg) translateZ(80px);
+	-moz-transform: rotateY(90deg) translateZ(80px);
+	transform: rotateY(90deg) translateZ(80px);
+	border: 1px solid #B8B5B5;
+}
+
+.movie .info a {
+	width: 70px;
+	height: 35px;
+	margin: 100px auto 0 auto;
+	line-height: 27px;
+	display: block;
+	border: 2px solid #333;
+	color: #333;
+	font-size: 18px;
+}
+/*************************************
+Shadow beneath the 3D object
+**************************************/
+
+.movie::after {
+	content: '';
+	width: 160px; 
+	height: 220px;
+	position: absolute;
+	bottom: 0;
+	box-shadow: 0 30px 50px rgba(0,0,0,0.3);
+	-webkit-transform-origin: 100% 100%;
+	-moz-transform-origin: 100% 100%;
+	transform-origin: 100% 100%;
+	-webkit-transform: rotateX(90deg) translateY(80px);
+	-moz-transform: rotateX(90deg) translateY(80px);
+	transform: rotateX(90deg) translateY(80px);
+	-webkit-transition: box-shadow 350ms, height 100ms;
+	-moz-transition: box-shadow 350ms, height 100ms;
+	transition: box-shadow 350ms, height 100ms;
+}
+
+.game:hover .movie::after {
+	height: 160px;
+	box-shadow: 20px -5px 50px rgba(0,0,0,0.3);
+}
+
+/*************************************
+Generate "lighting" using box shadows
+**************************************/
+
+.movie .poster,
+.movie .info {
+	-webkit-transition: box-shadow 350ms;
+	-moz-transition: box-shadow 350ms;
+	transition: box-shadow 350ms;
+}
+
+.movie .poster {
+	box-shadow: inset 0px 0px 40px rgba(255,255,255,0);
+}
+
+.game:hover .movie .poster {
+	box-shadow: inset 300px 0px 40px rgba(255,255,255,0.8);
+}
+
+.movie .info {
+	box-shadow: inset -300px 0px 40px rgba(0,0,0,0.5);
+}
+
+.game:hover .movie .info {
+	box-shadow: inset 0px 0px 40px rgba(0,0,0,0);
+}
+
+/*************************************
+Posters and still images
+**************************************/
+
+.poster#poster1 {
+  background-image: url(../img/poster01.jpg);
+}
+
+.poster#poster2 {
+  background-image: url(../img/poster02.jpg);
+}
+.poster#poster3 {
+  background-image: url(../img/poster01.jpg);
+}
+
+.poster#poster4 {
+  background-image: url(../img/poster02.jpg);
+}
+/***************************************
+ figcaption
+****************************************/
+
+figcaption {
+	padding-left: 40px;
+	text-align: left;
+	position: absolute;
+	top: 0%;
+	left: 160px;
+	width: 310px;
+}
+
+figcaption h1 {
+	font-size: 24px;
+	margin: 15px 0;
+	color: #fff;
+}
+
+figcaption p {
+	color: #ebebeb;
+	line-height: 1.4;
+}
+
+/****************************************
+ Media Queries
+*****************************************/
+@media screen and (max-width: 37.8125em) {
+	.align > li {
+		width: 100%;
+		min-height: 440px;
+		height: auto;
+		padding: 0;
+		margin: 0 0 30px 0;
+	}
+
+	.game {
+		margin: 0 auto;
+	}
+
+	figcaption {
+		text-align: center;
+		width: 320px;
+		top: 250px;
+		padding-left: 0;
+		left: -80px;
+		font-size: 90%;
+	}
+}

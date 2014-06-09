@@ -1,0 +1,193 @@
+ul#stage {
+	width: 500px;
+	height: 25px;
+	display: block;
+	margin: 20px auto;
+}
+ul#stage li {
+	float: left;
+	width: 25px;
+	height: 25px;
+	margin: 0 3px;
+	list-style: none;
+	text-indent: -99999px;
+	background: url(../img/stage.png) no-repeat;
+}
+ul#stage li.active {
+	background: url(../img/stage_active.png) no-repeat;
+}
+#counter {
+	width: 150px;
+	height: auto;
+	margin: 10px auto;
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+}
+ul#blokdrag {
+	width: 640px;
+	height: 100px;
+	margin: 20px auto;
+	display: block;
+}
+ul#blokdrag li {
+	width: 150px;
+	height: 35px;
+	float: left;
+	display: block;
+	border: solid 2px #fff;
+	margin: 3px;
+	color: #fff;
+	text-align: center;
+	font-size: 22px;
+	list-style: none;
+	cursor: pointer;
+	line-height: 32px;
+}
+ul#blokdrop {
+	width: 750px;
+	height: 220px;
+	margin: 40px auto;
+	display: block;
+}
+ul#blokdrop li {
+	width: 320px;
+	height: 40px;
+	margin: 7px 0;
+	display: block;
+	float: left;
+	list-style: none;
+}
+ul#blokdrop li.right {
+	float: right;
+}
+ul#blokdrag li.droped {
+	border-color: #3bc844;
+	color: #3bc844;
+	-webkit-transition: color,border-color 0.3s;
+	-moz-transition: color,border-color 0.3s;
+	transition: color,border-color 0.3s;
+}
+.word {
+	float: left;
+	width: 150px;
+	height: 35px;
+	display: block;
+	font-size: 22px;
+	color: #fff;
+	line-height: 23px;
+}
+.worddrop {
+	width: 150px;
+	height: 35px;
+	float: left;
+	border: dashed 2px #7ce4fb;
+}
+p#disc {
+	width: 500px;
+	height: 50px;
+	margin: 60px auto 0 auto;
+	color: #eee;
+	font-size: 16px;
+	font-style: italic;
+	line-height: 25px;
+	text-align: center;
+}
+#popap {
+	visibility: hidden;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width:100%;
+	height:100%;
+	background-color: #000;
+	opacity: .97;
+	z-index: 10000;
+}
+#cap {
+	width: 89px;
+	height: 93px;
+	margin: 100px auto 0 auto;
+	background: url(../img/cup.png) no-repeat;
+}
+#congratulation {
+	width: 500px;
+	height: 60px;
+	display: block;
+	margin: 40px auto 0 auto;
+	text-align: center;
+	font-size: 50px;
+	color: #fff200;
+	font-weight: 700;
+}
+#discrip {
+	width: 400px;
+	height: 30px;
+	display: block;
+	margin: 25px auto 20px auto;
+	text-align: center;
+	font-size: 18px;
+	color: #fff;
+}
+#next_but {
+	width: 130px;
+	height: 50px;
+	display: block;
+	margin: 40px auto 0 auto;
+	border: solid 2px #fff200;
+	color: #fff200;
+	font-size: 32px;
+	line-height: 50px;
+	text-decoration: none;
+	text-align: center;
+}
+#backrefresh {
+	width: 120px;
+	height: 40px;
+	margin: 40px auto 0 auto;
+}
+#backrefresh > #back {
+	width: 40px;
+	height: 40px;
+	display: block;
+	float: left;
+	background: url(../img/g1.png) no-repeat;
+}
+#backrefresh > #refresh {
+	width: 40px;
+	height: 40px;
+	display: block;
+	float: right;
+	background: url(../img/g1.png) no-repeat -40px;
+}
+/*------------------------------------*\
+    $RESPONSIVE
+\*------------------------------------*/
+@media only screen and (max-width: 850px) {
+	ul#stage {
+	width: 250px;
+	height: 50px;
+	}
+	ul#blokdrag {
+	width: 320px;
+	height: 200px;
+	}
+	ul#blokdrop {
+		width: 330px;
+		height: 440px;
+	}
+	ul#blokdrop li.right {
+	float: left;
+	}
+	p#disc {
+	width: 330px;
+	height: 100px;
+	margin: 30px auto 20px auto;
+	}
+}
+@media only screen and (max-width: 560px) {
+	#congratulation {
+	width: 400px;
+	font-size: 30px;
+	}
+}
